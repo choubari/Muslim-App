@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_salat"
+            android:icon="@drawable/salat"
+            android:title="أوقات الصلاة" />
+        <item
+            android:id="@+id/nav_sunrise"
+            android:icon="@drawable/sunrise"
+            android:title="أذكار الصباح" />
+        <item
+            android:id="@+id/nav_sunset"
+            android:icon="@drawable/isha"
+            android:title="أذكار المساء" />
+        <item
+            android:id="@+id/nav_dikr"
+            android:icon="@drawable/azkar"
+            android:title="فضل الأذكار" />
+        <item
+            android:id="@+id/nav_tasbih"
+            android:icon="@drawable/tesbiha"
+            android:title="مسبحة" />
+        <item
+            android:id="@+id/nav_qible"
+            android:icon="@drawable/qiblaa"
+            android:title="إتجاه القبلة" />
+        <item
+            android:id="@+id/nav_zakat"
+            android:icon="@drawable/zakat"
+            android:title="حاسبة الزكاة" />
+        <item
+            android:id="@+id/nav_wallpaper"
+            android:icon="@drawable/wallpp"
+            android:title="خلفيات الهاتف" />
+        <item
+            android:id="@+id/nav_widget"
+            android:icon="@drawable/widget"
+            android:title="سطح الهاتف" />
+    </group>
+    <item android:title="إعدادات">
+        <menu>
+            <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="عن التطبيق" />
+            <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/share"
+            android:title="شارك التطبيق" />
+        </menu>
+    </item>
+</menu>
