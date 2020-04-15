@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">Muslim App</string>
+    <string name="app_name">حصن المسلم</string>
+    <string name="app_desc">التطبيق اليومي لكل مسلم</string>
+    <string name="location">المدينة</string>
+    <string name="fajr">الصبح</string>
+    <string name="dohr">الظهر</string>
+    <string name="asr">العصر</string>
+    <string name="maghrib">المغرب</string>
+    <string name="isha">العشاء</string>
+    <string name="menu_prayertimes">أوقات الصلاة</string>
+    <string name="menu_sunrise">أذكار الصباح</string>
+    <string name="menu_sunset">أذكار المساء</string>
+    <string name="menu_azkar">فضل الأذكار</string>
+    <string name="menu_misbaha">مسبحة إلكترونية</string>
+    <string name="menu_qibla">إتجاه القبلة</string>
+    <string name="menu_zakat">حاسبة الزكاة</string>
+    <string name="menu_wallpaper">خلفيات الهاتف</string>
+    <string name="menu_widget">سطح الهاتف</string>
+    <string name="menu_aboutus">عن التطبيق</string>
+    <string name="menu_share">شارك التطبيق</string>
+    <string name="menu_set1">التطبيقات</string>
+    <string name="menu_set2">الملحقات</string>
+    <string name="menu_set3">الإعدادات</string>
+
 </resources>
