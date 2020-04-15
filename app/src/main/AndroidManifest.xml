@@ -4,16 +4,21 @@
     package="com.choubapp.muslimapp">
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FadlAdkar"></activity>
+        <activity android:name=".AboutUs"/>
+        <activity android:name=".Widgets" />
+        <activity android:name=".Wallpapers" />
+        <activity android:name=".Misbaha" />
+        <activity android:name=".ZakatCalculator" />
+        <activity android:name=".QiblaFinder" />
+        <activity android:name=".FadlAdkar" />
+        <activity android:name=".SalatSettings" />
         <activity android:name=".AdkarMassaa" />
         <activity android:name=".AdkarSabah" />
-        <activity android:name=".SalatSettings" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
