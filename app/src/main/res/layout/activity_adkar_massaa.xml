@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdkarSabah">
-
+    tools:context=".AdkarMassaa">
     <TextView
-        android:id="@+id/adkarsabahtitle"
+        android:id="@+id/adkarmassaatitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/changa_bold"
-        android:text="@string/menu_sunrise"
+        android:text="@string/menu_sunset"
         android:gravity="center"
         android:layout_margin="5dp"
         android:textColor="@color/colorAccent"
@@ -24,10 +23,9 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/adkarsabahtitle"
         android:scrollbarThumbVertical="@color/colorAccent"
         android:scrollbarSize="5dp"
+        android:layout_below="@+id/adkarmassaatitle"
         android:padding="4dp"
         android:scrollbars="vertical" />
-
 </RelativeLayout>
