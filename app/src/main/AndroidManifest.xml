@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:screenOrientation="portrait"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppThemee">
         <activity android:name=".AboutUs"/>
         <activity android:name=".Widgets" />
         <activity android:name=".Wallpapers" />
