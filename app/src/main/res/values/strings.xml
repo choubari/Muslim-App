@@ -1,4 +1,12 @@
 <resources>
+    <!-- Some Strings-->
+    <string name="loading">جاري التحميل  ...</string>
+    <string name="NightMode">الوضع الليلي</string>
+    <string name="yes">نعم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="leaveapp">مغادرة التطبيق</string>
+    <string name="leavetextmsg">هل تريد الخروج من التطبيق ؟</string>
+
     <!-- Menus Strings -->
     <string name="app_name">حصن المسلم</string>
     <string name="app_desc">التطبيق اليومي لكل مسلم</string>
@@ -17,11 +25,21 @@
     <string name="menu_zakat">حاسبة الزكاة</string>
     <string name="menu_wallpaper">خلفيات الهاتف</string>
     <string name="menu_widget">سطح الهاتف</string>
-    <string name="menu_aboutus">عن التطبيق</string>
+    <string name="menu_aboutus">إعدادات التطبيق</string>
     <string name="menu_share">شارك التطبيق</string>
     <string name="menu_set1">التطبيقات</string>
     <string name="menu_set2">الملحقات</string>
     <string name="menu_set3">الإعدادات</string>
+
+    <!--About Us Menu Strings-->
+    <string name="notifications">التنبيهات</string>
+    <string name="appversion">نسخة التطبيق</string>
+    <string name="version">1.0</string>
+    <string name="privacypolicy">سياسة الخصوصية</string>
+    <string name="reportproblem">الإبلاغ عن مشكلة</string>
+    <string name="givefeedback">تقييم التطبيق</string>
+    <string name="developedby">قدم و برمج هذا التطبيق من طرف ChoubApps</string>
+
     <!-- Adkar Sabah Strings -->
     <string name="adkarsabah1">أَصْـبَحْنا وَأَصْـبَحَ المُـلْكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذا اليوم وَخَـيرَ ما بَعْـدَه ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذا اليوم وَشَرِّ ما بَعْـدَه، رَبِّ أَعـوذُبِكَ مِنَ الْكَسَـلِ وَسـوءِ الْكِـبَر ، رَبِّ أَعـوذُ بِكَ مِنْ عَـذابٍ في النّـارِ وَعَـذابٍ في القَـبْر. </string>
     <string name="adkarsabah2">اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك.</string>
@@ -94,7 +112,4 @@
     <string name="thought14">"من قعد مقعدا لم يذكر الله فيه كانت عليه من الله تره ، و من أضطجع مضجعا لم يذكر فيه الله كانت عليه ترة".</string>
     <string name="thought15">"ما جلس قوم مجلسا لم يذكروا الله فيه ، و لم يصلوا على نبيهم الا كان عليهم ترة فان شاء عذبهم و ان شاء غفر لهم".</string>
     <string name="thought16"> "ما من قوم يقومون من مجلس لا يذكرون الله فيه الا قاموا عن مثل جيفة حمار و كان لهم حسره".</string>
-
-
-
 </resources>

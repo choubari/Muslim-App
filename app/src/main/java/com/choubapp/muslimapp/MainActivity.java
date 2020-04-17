@@ -1,8 +1,10 @@
 package com.choubapp.muslimapp;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -14,13 +16,22 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
 
 public class MainActivity extends AppCompatActivity {
-   @Override
+    static final String THEME_KEY = "Theme";
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences prefs = getSharedPreferences(THEME_KEY,0);
+        int thm=AboutUs.getCurrentTheme(prefs);
+        AboutUs.setCurrentTheme(this, thm);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Toast.makeText(getApplicationContext(),getText(R.string.loading),Toast.LENGTH_SHORT).show();
     }
 
 
@@ -63,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void aboutus(View v){
         Intent intent= new Intent(this,AboutUs.class);
+        overridePendingTransition(0, 0);
         startActivity(intent);
+        overridePendingTransition(0, 0);
+        finish();
     }
 }

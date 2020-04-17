@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:screenOrientation="portrait"
         android:theme="@style/AppThemee">
-        <activity android:name=".AboutUs"/>
+        <activity android:name=".AboutUs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.choubapp.muslimapp.MainActivity" />
+        </activity>
         <activity android:name=".Widgets" />
         <activity android:name=".Wallpapers" />
         <activity android:name=".Misbaha" />
