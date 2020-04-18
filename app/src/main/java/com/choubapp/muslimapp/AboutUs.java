@@ -36,7 +36,7 @@ public class AboutUs extends AppCompatActivity {
     }
 
     public static int getCurrentTheme(SharedPreferences pref){
-        int t = pref.getInt("Theme", R.style.AppTheme);
+        int t = pref.getInt("Theme", R.style.AppThemee);
         return t;
     }
     public static void setCurrentTheme(Activity activity,int x){

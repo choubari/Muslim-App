@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:text="@string/version"
             android:textSize="18sp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:textColor="@color/colorAccent"
             android:shadowColor="@color/colorPrimary"
             android:fontFamily="@font/changa_bold"

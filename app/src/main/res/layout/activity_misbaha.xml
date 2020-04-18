@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Misbaha">
-
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/aboutustitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_bold"
+        android:text="@string/menu_misbaha"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="-2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textSize="24sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/changa_bold"
+        android:text="@string/counter"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/counter_text"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:padding="5dp"
+        android:background="@color/lightblue"
+        android:layout_gravity="center"
+        android:fontFamily="@font/digital_7"
+        android:text="0"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="90dp"
+        android:layout_gravity="end"
+        android:onClick="reset"
+        android:src="@drawable/missbaha_resetcircle"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="counter"
+        android:src="@drawable/missbaha_countercircle"/>
+</LinearLayout>

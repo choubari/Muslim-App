@@ -26,7 +26,7 @@
             android:gravity="left"
             android:layout_below="@+id/douaa"
             android:textColor="@color/colorGrey"
-            android:fontFamily="@font/changa_light"
+            android:fontFamily="@font/changa_bold"
             android:layout_marginStart="20dp"
             android:text="Line 2"
             android:textSize="15sp" />
