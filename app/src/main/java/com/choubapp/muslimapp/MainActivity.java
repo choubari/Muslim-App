@@ -1,28 +1,23 @@
 package com.choubapp.muslimapp;
 
-import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.DialogInterface;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.ScrollView;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Random;
 
 
 public class MainActivity extends AppCompatActivity {
     static final String THEME_KEY = "Theme";
+    ArrayList<String> NotifMessages = new ArrayList<>();
+    private Random rng = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +26,56 @@ public class MainActivity extends AppCompatActivity {
         AboutUs.setCurrentTheme(this, thm);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toast.makeText(getApplicationContext(),getText(R.string.loading),Toast.LENGTH_SHORT).show();
+        NotifMessages();
+        scheduleNotification(this,1);
+        scheduleNotification(this,2);
     }
-
-
+    public void NotifMessages(){
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought1)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought2)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought3)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought4)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought5)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought6)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought7)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought8)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought9)+"“");
+        NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought10)+"“");
+    }
+    public void scheduleNotification(Context context,int type){
+        Intent broadcastIntent = new Intent("android.media.action.DISPLAY_NOTIFICATION");
+        broadcastIntent.addCategory("android.intent.category.DEFAULT");
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        Calendar cal = Calendar.getInstance();
+        switch (type) {
+            case 1: { //AdkarSabah
+                int random = rng.nextInt(NotifMessages.size());
+                broadcastIntent.putExtra("NotifTitle1", getString(R.string.menu_sunrise));
+                broadcastIntent.putExtra("NotifMsg1", NotifMessages.get(random));
+                broadcastIntent.putExtra("NotifId1",type);
+                PendingIntent broadcast = PendingIntent.getBroadcast(this, 1, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                //Time will be get later from Subuh Prayer Time
+                cal.set(Calendar.HOUR_OF_DAY, 6);
+                cal.set(Calendar.MINUTE,07);
+                cal.set(Calendar.YEAR, 2020);
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, broadcast);
+                break;
+            }
+            case 2: { //AdkarMassaa
+                int random = rng.nextInt(NotifMessages.size());
+                broadcastIntent.putExtra("NotifTitle2", getString(R.string.menu_sunset));
+                broadcastIntent.putExtra("NotifMsg2", NotifMessages.get(random));
+                broadcastIntent.putExtra("NotifId2",type);
+                PendingIntent broadcastt = PendingIntent.getBroadcast(this, 2, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                //Time will be get later from Asr Prayer Time
+                cal.set(Calendar.HOUR_OF_DAY, 19);
+                cal.set(Calendar.MINUTE,15);
+                cal.set(Calendar.YEAR, 2020);
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, broadcastt);
+                break;
+            }
+        }
+    }
 
     public void salatsettings(View v){
         Intent intent= new Intent(this,SalatSettings.class);

@@ -1,11 +1,15 @@
 package com.choubapp.muslimapp;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Switch;
 
 import static com.choubapp.muslimapp.AboutUs.setCurrentTheme;
@@ -83,6 +87,13 @@ public class AboutUs extends AppCompatActivity {
         }
         mEditor.commit();
     }
-
+    public void NotifCheckBox(View v){
+        CheckBox box=findViewById(R.id.notificationcheckbox);
+        if (box.isChecked()){
+            System.out.println("box checked");
+        }else{
+            System.out.println("box unchecked");
+        }
+    }
 
 }
