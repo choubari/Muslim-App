@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         NotifMessages();
-        scheduleNotification(this,1);
-        scheduleNotification(this,2);
+        scheduleNotification(this,1,6,10);
+        scheduleNotification(this,2,19,20);
     }
     public void NotifMessages(){
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought1)+"“");
@@ -42,35 +42,34 @@ public class MainActivity extends AppCompatActivity {
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought9)+"“");
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought10)+"“");
     }
-    public void scheduleNotification(Context context,int type){
+    public void scheduleNotification(Context context,int type, int hh, int mm){
         Intent broadcastIntent = new Intent("android.media.action.DISPLAY_NOTIFICATION");
         broadcastIntent.addCategory("android.intent.category.DEFAULT");
+        broadcastIntent.putStringArrayListExtra("ArrayMessages",NotifMessages);
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Calendar cal = Calendar.getInstance();
         switch (type) {
             case 1: { //AdkarSabah
-                int random = rng.nextInt(NotifMessages.size());
                 broadcastIntent.putExtra("NotifTitle1", getString(R.string.menu_sunrise));
-                broadcastIntent.putExtra("NotifMsg1", NotifMessages.get(random));
                 broadcastIntent.putExtra("NotifId1",type);
+                broadcastIntent.putExtra("NotifHH1",hh);
+                broadcastIntent.putExtra("NotifMM1",mm);
                 PendingIntent broadcast = PendingIntent.getBroadcast(this, 1, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 //Time will be get later from Subuh Prayer Time
-                cal.set(Calendar.HOUR_OF_DAY, 6);
-                cal.set(Calendar.MINUTE,07);
-                cal.set(Calendar.YEAR, 2020);
-                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, broadcast);
+                cal.set(Calendar.HOUR_OF_DAY,hh);
+                cal.set(Calendar.MINUTE,mm);
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),  AlarmManager.INTERVAL_DAY, broadcast);
                 break;
             }
             case 2: { //AdkarMassaa
-                int random = rng.nextInt(NotifMessages.size());
                 broadcastIntent.putExtra("NotifTitle2", getString(R.string.menu_sunset));
-                broadcastIntent.putExtra("NotifMsg2", NotifMessages.get(random));
                 broadcastIntent.putExtra("NotifId2",type);
+                broadcastIntent.putExtra("NotifHH2",hh);
+                broadcastIntent.putExtra("NotifMM2",mm);
                 PendingIntent broadcastt = PendingIntent.getBroadcast(this, 2, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 //Time will be get later from Asr Prayer Time
-                cal.set(Calendar.HOUR_OF_DAY, 19);
-                cal.set(Calendar.MINUTE,15);
-                cal.set(Calendar.YEAR, 2020);
+                cal.set(Calendar.HOUR_OF_DAY, hh);
+                cal.set(Calendar.MINUTE,mm);
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, broadcastt);
                 break;
             }

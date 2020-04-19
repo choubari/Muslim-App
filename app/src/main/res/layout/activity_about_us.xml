@@ -85,6 +85,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/changa_bold"
             android:textSize="18sp"
+            android:onClick="privacypolicy"
             android:text="@string/privacypolicy" />
     </LinearLayout>
     <LinearLayout
@@ -100,6 +101,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/changa_bold"
             android:textSize="18sp"
+            android:onClick="RateApp"
             android:text="@string/givefeedback" />
     </LinearLayout>
     <LinearLayout
@@ -114,6 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/changa_bold"
+            android:onClick="reportProblem"
             android:textSize="18sp"
             android:text="@string/reportproblem" />
     </LinearLayout>

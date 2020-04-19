@@ -6,6 +6,10 @@
     <string name="cancel">إلغاء</string>
     <string name="leaveapp">مغادرة التطبيق</string>
     <string name="leavetextmsg">هل تريد الخروج من التطبيق ؟</string>
+    <string name="title">العنوان</string>
+    <string name="message">الرسالة</string>
+    <string name="send">إرسال</string>
+    <string name="reportHint">ملاحظة: المرجو شرح المشكل جيدا ليتم حله بأسرع وقت</string>
 
     <!-- Menus Strings -->
     <string name="app_name">حصن المسلم</string>

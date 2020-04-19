@@ -87,6 +87,17 @@ public class AboutUs extends AppCompatActivity {
         }
         mEditor.commit();
     }
+    public void privacypolicy(View v) {
+        Intent intent = new Intent(this, PrivacyPolicy.class);
+        startActivity(intent);
+    }
+    public  void reportProblem(View v){
+        Intent intent = new Intent(this, ReportProblem.class);
+        startActivity(intent);
+    }
+    public void RateApp (View v){
+
+    }
     public void NotifCheckBox(View v){
         CheckBox box=findViewById(R.id.notificationcheckbox);
         if (box.isChecked()){
