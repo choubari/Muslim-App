@@ -14,7 +14,7 @@ Here is some screenshots from inside, so if you understand arabic go check the d
 * **18 April** : Adding Notification Channel and setting notifications for AdkarSabah&Massaa , coding Missbaha Menu
 * **19 April** : Fix Notifiation problems, Update AboutUs Menu
 * ~~**20 April**~~ : Sleeping Troubles + Getting sick *(i just looked for some documentations about GPS locations, sensors, APIs..., i didn't code)*
-* **21 April** :
+* ~~**21 April**~~ : A School Homework took me all the day :confused:
 * **22 April** :
 * **23 April** :
 
