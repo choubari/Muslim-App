@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -17,7 +18,6 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     static final String THEME_KEY = "Theme";
     ArrayList<String> NotifMessages = new ArrayList<>();
-    private Random rng = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         NotifMessages();
-        scheduleNotification(this,1,6,10);
-        scheduleNotification(this,2,19,20);
+        scheduleNotification(this,1,6);
+        scheduleNotification(this,2,19);
+        if(NetworkConnectivity.isNetworkStatusAvialable (getApplicationContext())) {
+            Toast.makeText(getApplicationContext(), getString(R.string.internetfound), Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), getString(R.string.internetlost), Toast.LENGTH_SHORT).show();
+        }
     }
+
     public void NotifMessages(){
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought1)+"“");
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought2)+"“");
@@ -42,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought9)+"“");
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought10)+"“");
     }
-    public void scheduleNotification(Context context,int type, int hh, int mm){
+    public void scheduleNotification(Context context,int type, int hh){
         Intent broadcastIntent = new Intent("android.media.action.DISPLAY_NOTIFICATION");
         broadcastIntent.addCategory("android.intent.category.DEFAULT");
         broadcastIntent.putStringArrayListExtra("ArrayMessages",NotifMessages);
@@ -53,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
                 broadcastIntent.putExtra("NotifTitle1", getString(R.string.menu_sunrise));
                 broadcastIntent.putExtra("NotifId1",type);
                 broadcastIntent.putExtra("NotifHH1",hh);
-                broadcastIntent.putExtra("NotifMM1",mm);
+                //broadcastIntent.putExtra("NotifMM1",mm);
                 PendingIntent broadcast = PendingIntent.getBroadcast(this, 1, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 //Time will be get later from Subuh Prayer Time
                 cal.set(Calendar.HOUR_OF_DAY,hh);
-                cal.set(Calendar.MINUTE,mm);
+                //cal.set(Calendar.MINUTE,mm);
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),  AlarmManager.INTERVAL_DAY, broadcast);
                 break;
             }
@@ -65,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
                 broadcastIntent.putExtra("NotifTitle2", getString(R.string.menu_sunset));
                 broadcastIntent.putExtra("NotifId2",type);
                 broadcastIntent.putExtra("NotifHH2",hh);
-                broadcastIntent.putExtra("NotifMM2",mm);
+                //broadcastIntent.putExtra("NotifMM2",mm);
                 PendingIntent broadcastt = PendingIntent.getBroadcast(this, 2, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 //Time will be get later from Asr Prayer Time
                 cal.set(Calendar.HOUR_OF_DAY, hh);
-                cal.set(Calendar.MINUTE,mm);
+                //cal.set(Calendar.MINUTE,mm);
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, broadcastt);
                 break;
             }

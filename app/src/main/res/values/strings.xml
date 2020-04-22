@@ -10,6 +10,7 @@
     <string name="message">الرسالة</string>
     <string name="send">إرسال</string>
     <string name="reportHint">ملاحظة: المرجو شرح المشكل جيدا ليتم حله بأسرع وقت</string>
+    <string name="wallhint">خلفيات تتجدد في كل مرة تدخل للتطبيق</string>
 
     <!-- Menus Strings -->
     <string name="app_name">حصن المسلم</string>
@@ -119,4 +120,8 @@
 
     <!--Missbaha Menu Strings-->
     <string name="counter">عداد التسبيحات</string>
+
+    <!--Toast Messages-->
+    <string name="internetlost">لتجديد معطيات الصفحة، يجب أن تتصل بالإنترنت</string>
+    <string name="internetfound">جاري تجديد المعطيات ...</string>
 </resources>

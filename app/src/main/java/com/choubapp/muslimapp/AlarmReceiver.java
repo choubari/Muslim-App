@@ -11,7 +11,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
@@ -40,7 +39,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         String message1 = NotifMessages.get(random1);
         int id1 =intent.getIntExtra("NotifId1",0);
         int hh1 = intent.getIntExtra("NotifHH1",6);
-        int mm1 = intent.getIntExtra("NotifMM1",0);
         if (id1!=0 && currHH<= hh1) {
             createNotif(context, contentIntent, id1, title1, message1);
         }
