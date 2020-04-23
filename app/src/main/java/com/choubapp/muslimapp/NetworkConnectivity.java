@@ -4,8 +4,8 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-public class NetworkConnectivity {
-    public static boolean isNetworkStatusAvialable (Context context) {
+class NetworkConnectivity {
+    static boolean isNetworkStatusAvailable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null)
         {

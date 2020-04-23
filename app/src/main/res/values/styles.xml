@@ -22,4 +22,22 @@
         <item name="cardBackgroundColor">@android:color/white</item>
         <item name="android:windowBackground">@drawable/wallpaperr</item>
     </style>
+
+
+    <!--Style pour les alertDialog-->
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:textColorTertiary">@color/colorPrimaryDark</item>
+        <item name="android:buttonBarButtonStyle">@style/MyDialogButton</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/changa_bold</item>
+        <item name="android:background">@color/lightblue</item>
+    </style>
+    <style name="MyDialogButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@color/lightblue</item>
+    </style>
+
 </resources>

@@ -4,6 +4,7 @@
     <string name="NightMode">الوضع الليلي</string>
     <string name="yes">نعم</string>
     <string name="cancel">إلغاء</string>
+    <string name="savewallpaper">هل تود حفظ هذه الصورة كخلفية لجهازك؟</string>
     <string name="leaveapp">مغادرة التطبيق</string>
     <string name="leavetextmsg">هل تريد الخروج من التطبيق ؟</string>
     <string name="title">العنوان</string>
@@ -124,4 +125,9 @@
     <!--Toast Messages-->
     <string name="internetlost">لتجديد معطيات الصفحة، يجب أن تتصل بالإنترنت</string>
     <string name="internetfound">جاري تجديد المعطيات ...</string>
+    <string name="wallpaperfailed">خلل في حفظ الخلفية</string>
+    <string name="wallpaperloading">جاري حفظ الخلفية ...</string>
+    <string name="wallpaperset">تم حفظ الخلفية بنجاح</string>
+    <string name="wallpapertryagain">المرجو الإعادة</string>
+
 </resources>

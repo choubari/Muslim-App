@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Random;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         NotifMessages();
         scheduleNotification(this,1,6);
         scheduleNotification(this,2,19);
-        if(NetworkConnectivity.isNetworkStatusAvialable (getApplicationContext())) {
+        if(NetworkConnectivity.isNetworkStatusAvailable(getApplicationContext())) {
             Toast.makeText(getApplicationContext(), getString(R.string.internetfound), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getApplicationContext(), getString(R.string.internetlost), Toast.LENGTH_SHORT).show();
