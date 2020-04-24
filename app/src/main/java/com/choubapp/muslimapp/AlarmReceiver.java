@@ -38,7 +38,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         String title1 =intent.getStringExtra("NotifTitle1");
         String message1 = NotifMessages.get(random1);
         int id1 =intent.getIntExtra("NotifId1",0);
-        int hh1 = intent.getIntExtra("NotifHH1",6);
+        int hh1 = intent.getIntExtra("NotifHH1",5);
         if (id1!=0 && currHH<= hh1) {
             createNotif(context, contentIntent, id1, title1, message1);
         }
@@ -46,7 +46,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         String title2 =intent.getStringExtra("NotifTitle2");
         String message2 =NotifMessages.get(random2);
         int id2 =intent.getIntExtra("NotifId2",0);
-        int hh2 = intent.getIntExtra("NotifHH2",19);
+        int hh2 = intent.getIntExtra("NotifHH2",17);
         if (id2!=0 && currHH<= hh2) {
             createNotif(context, contentIntent, id2, title2, message2);
         }
@@ -57,7 +57,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         long[] pattern = { 0, 100, 200, 300 };
         Notification notification = new NotificationCompat.Builder(context, CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.azkar)
+                .setSmallIcon(R.drawable.iconwhitebg)
                 .setContentTitle(ttl)
                 .setContentText(msg)
                 .setStyle(new NotificationCompat.BigTextStyle()

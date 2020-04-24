@@ -61,10 +61,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:onClick="salatsettings"
-                    android:src="@drawable/salat_settings"/>
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/refr"
+                    android:onClick="RefreshPrayerTimes"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/refresh"/>
                 <TextView
                     android:id="@+id/awkat"
                     android:layout_width="match_parent"
@@ -172,7 +174,7 @@
                         android:fontFamily="@font/changa_light"
                         android:textSize="14sp" />
                     <TextView
-                        android:id="@+id/dohr"
+                        android:id="@+id/duhur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/changa_light"
