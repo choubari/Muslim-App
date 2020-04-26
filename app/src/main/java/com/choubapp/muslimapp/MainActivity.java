@@ -16,12 +16,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.zip.Inflater;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class MainActivity extends AppCompatActivity {
     static final String THEME_KEY = "Theme";
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent broadcast = PendingIntent.getBroadcast(this, 1, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 //Time will be get later from Subuh Prayer Time
                 cal.set(Calendar.HOUR_OF_DAY,hh);
-                //cal.set(Calendar.MINUTE,mm);
+                cal.set(Calendar.MINUTE,05);
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),  AlarmManager.INTERVAL_DAY, broadcast);
                 break;
             }
@@ -98,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent broadcastt = PendingIntent.getBroadcast(this, 2, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 //Time will be get later from Asr Prayer Time
                 cal.set(Calendar.HOUR_OF_DAY, hh);
-                //cal.set(Calendar.MINUTE,mm);
+                cal.set(Calendar.MINUTE,05);
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, broadcastt);
                 break;
             }
@@ -107,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void RefreshPrayerTimes(View v){
         if(NetworkConnectivity.isNetworkStatusAvailable(getApplicationContext())) {
-            Toast.makeText(getApplicationContext(), getString(R.string.loadingprayertimes), Toast.LENGTH_SHORT).show();
             new GetPrayerTimes().execute();
         } else {
             Toast.makeText(getApplicationContext(), getString(R.string.internetfirst), Toast.LENGTH_SHORT).show();
@@ -189,12 +192,14 @@ public class MainActivity extends AppCompatActivity {
     public void LoadPreviousSalatData(){
         SharedPreferences salatpref = getSharedPreferences("lastprayertimes", MODE_PRIVATE);
         System.out.println("good1");
-
-        mFajr=findViewById(R.id.fajr);
-        mDuhur=findViewById(R.id.duhur);
-        mAsr=findViewById(R.id.asr);
-        mMaghrib=findViewById(R.id.maghrib);
-        mCity=findViewById(R.id.city);
+        TextView mxFajr,mxDuhur,mxAsr,mxMaghrib,mxIsha,mxCity;
+        mxFajr=findViewById(R.id.fajr);
+        mxFajr.setText("hhmm");
+        mxDuhur=findViewById(R.id.duhur);
+        mxAsr=findViewById(R.id.asr);
+        mxMaghrib=findViewById(R.id.maghrib);
+        mxIsha=findViewById(R.id.isha);
+        mxCity=findViewById(R.id.city);
         System.out.println("good1");
         String GETPrayerCity =salatpref.getString("city",getString(R.string.location));
         String GETfajr = salatpref.getString("fajr","00:00");
@@ -204,6 +209,12 @@ public class MainActivity extends AppCompatActivity {
         String GETisha = salatpref.getString("isha","00:00");
         System.out.println("good1" + GETPrayerCity);
 
+        mxCity.setText(GETPrayerCity);
+        mxFajr.setText(GETfajr);
+        mxDuhur.setText(GETduhur);
+        mxAsr.setText(GETasr);
+        mxMaghrib.setText(GETmaghrib);
+        mxIsha.setText(GETisha);
     }
 
     private class GetPrayerTimes extends AsyncTask<Void, Void, Void> {

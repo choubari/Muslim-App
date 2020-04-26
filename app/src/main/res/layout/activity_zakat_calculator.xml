@@ -43,14 +43,86 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="15dp">
-        <Spinner
-            android:layout_width="40dp"
-            android:layout_height="20dp"
-            android:background="@color/white"
-            android:backgroundTint="@color/colorGrey"
-            android:id="@+id/spinner"/>
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/totalprice"
+            android:textSize="18sp"
+            android:fontFamily="@font/changa_bold"
+            android:gravity="right"/>
+        <EditText
+            android:id="@+id/inputtotalprice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:padding="7dp"
+            android:inputType = "number"
+            android:backgroundTint="@color/white"
+            android:background="@color/lightblue"
+            android:hint="@string/localprice" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/goldprice"
+            android:textSize="18sp"
+            android:fontFamily="@font/changa_bold"
+            android:gravity="right"/>
+        <EditText
+            android:id="@+id/inputgoldprice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:padding="7dp"
+            android:inputType = "number"
+            android:backgroundTint="@color/white"
+            android:background="@color/lightblue"
+            android:hint="@string/localprice" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/underlinelink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_light"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:onClick="LocalPriceGold"
+        android:text="@string/localgoldprice"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_margin="15dp"
+        android:onClick="CalculateZakat"
+        android:fontFamily="@font/changa_bold"
+        android:textColor="@color/white"
+        android:background="@color/colorAccent"
+        android:text="@string/calculate"/>
+    <TextView
+        android:id="@+id/zakatresult1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_bold"
+        android:textSize="16sp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/zakatresult2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_light"
+        android:textSize="16sp"
+        android:gravity="center" />
 </LinearLayout>

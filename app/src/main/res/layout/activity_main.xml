@@ -66,6 +66,7 @@
                     android:id="@+id/refr"
                     android:onClick="RefreshPrayerTimes"
                     android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
                     android:src="@drawable/refresh"/>
                 <TextView
                     android:id="@+id/awkat"
@@ -73,11 +74,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/changa_light"
                     android:text="@string/menu_prayertimes"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/awkat"
                     android:src="@drawable/map"/>
@@ -87,7 +87,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/awkat"
                     android:fontFamily="@font/changa_light"
-                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
                     android:text="@string/location"
                     android:textSize="24sp" />
 
