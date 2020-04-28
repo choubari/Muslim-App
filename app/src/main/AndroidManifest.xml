@@ -11,7 +11,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppThemee">
-        <activity android:name=".GoldPrice"></activity>
+        <activity android:name=".SalatSettings"/>
+        <activity android:name=".GoldPrice" />
         <activity android:name=".ReportProblem" />
         <activity android:name=".PrivacyPolicy" />
         <activity android:name=".AboutUs">
@@ -53,11 +54,14 @@
             </intent-filter>
         </receiver>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
 
 </manifest>

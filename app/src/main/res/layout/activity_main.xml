@@ -64,10 +64,10 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:id="@+id/refr"
-                    android:onClick="RefreshPrayerTimes"
+                    android:onClick="SalatSettings"
                     android:layout_marginBottom="20dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/refresh"/>
+                    android:src="@drawable/salat_settings"/>
                 <TextView
                     android:id="@+id/awkat"
                     android:layout_width="match_parent"
@@ -89,14 +89,14 @@
                     android:fontFamily="@font/changa_light"
                     android:layout_marginTop="5dp"
                     android:layout_marginStart="40dp"
-                    android:text="@string/location"
+                    android:text="@string/city"
                     android:textSize="24sp" />
 
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="25dp"
                 android:orientation="horizontal"
                 android:baselineAligned="false">
                 <LinearLayout
@@ -539,6 +539,7 @@
                 android:layout_width="160dp"
                 android:layout_height="120dp"
                 android:layout_weight="1"
+                android:onClick="shareApp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="2dp">
                 <RelativeLayout

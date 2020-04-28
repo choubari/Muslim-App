@@ -46,31 +46,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/changa_bold"
             android:textSize="18sp"
-            android:text="@string/NightMode"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:background="@color/lightblue"
-        android:padding="10dp">
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/notificationcheckbox"
-            android:onClick="NotifCheckBox"
-            android:layout_marginLeft="15dp"
-            android:checked="true"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/changa_bold"
-            android:textSize="18sp"
-            android:text="@string/notifications" />
+            android:text="@string/NightMode" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

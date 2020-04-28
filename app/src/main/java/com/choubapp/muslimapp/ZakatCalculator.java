@@ -45,8 +45,10 @@ public class ZakatCalculator extends AppCompatActivity {
         TotalPrice=findViewById(R.id.inputtotalprice);
         Result1=findViewById(R.id.zakatresult1);
         Result2=findViewById(R.id.zakatresult2);
+        if (GoldPrice.getText().toString().equals("") || TotalPrice.getText().toString().equals("")) return;
         InputGold=Float.parseFloat(GoldPrice.getText().toString());
         InputTotal=Float.parseFloat(TotalPrice.getText().toString());
+
         double nissab = InputGold*85.05;
         String result = getString(R.string.nissab) +" "+ nissab;
         String zakat ;
@@ -56,13 +58,10 @@ public class ZakatCalculator extends AppCompatActivity {
             Result2.setText(result);
         }else{
             float zakatprice = (float) (InputTotal*0.025);
-            DecimalFormat df = new DecimalFormat("0.00");
-
             zakat= getString(R.string.zakatprice) +" "+ zakatprice ;
             Result1.setText(zakat);
             Result2.setText(result);
         }
-
     }
 
     @Override

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SalatSettings">
+    <TextView
+        android:id="@+id/aboutustitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_bold"
+        android:text="@string/menu_prayersettings"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="-2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textSize="24sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/lightblue"
+        android:onClick="findLocation"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/displayCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_light"
+            android:textSize="16sp"
+            android:text="Rabat" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:textSize="18sp"
+            android:text="@string/location" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_bold"
+        android:textSize="18sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/manualcorr" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="setOffsetFajr"
+        android:background="@color/lightblue">
+        <TextView
+            android:id="@+id/fajrcorr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_light"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/fajr" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="setOffsetDhuhr"
+        android:background="@color/lightblue">
+        <TextView
+            android:id="@+id/duhurcorr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_light"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/dohr" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="setOffsetAsr"
+        android:background="@color/lightblue">
+        <TextView
+            android:id="@+id/asrcorr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_light"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/asr" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="setOffsetMaghrib"
+        android:background="@color/lightblue">
+        <TextView
+            android:id="@+id/maghrebcorr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_light"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/maghrib" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="setOffsetIsha"
+        android:background="@color/lightblue">
+        <TextView
+            android:id="@+id/ishacorr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_light"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/isha" />
+    </LinearLayout>
+</LinearLayout>

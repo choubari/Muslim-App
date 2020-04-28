@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import static com.choubapp.muslimapp.AboutUs.setCurrentTheme;
 
@@ -98,13 +99,6 @@ public class AboutUs extends AppCompatActivity {
     public void RateApp (View v){
 
     }
-    public void NotifCheckBox(View v){
-        CheckBox box=findViewById(R.id.notificationcheckbox);
-        if (box.isChecked()){
-            System.out.println("box checked");
-        }else{
-            System.out.println("box unchecked");
-        }
-    }
+
 
 }

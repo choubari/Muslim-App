@@ -15,7 +15,7 @@ public class PrivacyPolicy extends AppCompatActivity {
         setContentView(R.layout.activity_privacy_policy);
         webView = (WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://www.google.com");
+        webView.loadUrl("https://geektechwork.wixsite.com/muslimapp/syash-alkhswsyh");
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
     }
