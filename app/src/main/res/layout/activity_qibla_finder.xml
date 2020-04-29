@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".QiblaFinder">
     <TextView
         android:id="@+id/aboutustitle"
@@ -20,8 +20,47 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:textSize="24sp" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="QiblaTips"
+        android:src="@drawable/information"/>
+    <ImageView
+        android:id="@+id/main_image_dial"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/dial" />
+    <ImageView
+        android:id="@+id/main_image_qibla"
+        android:layout_width="37dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/qibla_arrow" />
+    <TextView
+        android:id="@+id/text_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/changa_light"
+        android:textSize="14sp"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:id="@+id/text_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/changa_light"
+        android:textSize="14sp"
+        android:layout_marginBottom="60dp" />
 
 
 
 
-</LinearLayout>
+</RelativeLayout>

@@ -50,8 +50,9 @@
         android:onClick="reset"
         android:src="@drawable/missbaha_resetcircle"/>
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="counter"
+        android:layout_gravity="center"
         android:src="@drawable/missbaha_countercircle"/>
 </LinearLayout>

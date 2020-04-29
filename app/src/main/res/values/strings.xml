@@ -188,4 +188,20 @@
     <string name="SalatExtra4">الصلاة نور لصاحبها في الدنيا وفي الآخرة</string>
     <string name="SalatExtra5">الصّلاة أفضل الأعمال عند الله -تعالى- بعد الشهادتين</string>
 
+    <!--Qibla Menu Strings-->
+    <string name="gps_settings_title">إعداداتGPS</string>
+    <string name="gps_settings_text">تقنية GPS غير مفعلة، يجب عليك تفعيلها أولا من الإعدادات لتحصل على اتجاه القبلة.</string>
+    <string name="permission_not_garanted">الصلاحيات غير مفعلة</string>
+    <string name="permissiongaranted">تم تفعيل الصلاحيات، المرجو تفعيل GPS و إعادة الدخول للقائمة لتجديد البيانات</string>
+    <string name="coord">الإحداثيات:</string>
+    <string name="qibladirection">إتجاه القبلة: </string>
+    <string name="fromnorth">درجة من الشمال</string>
+    <string name="lastlocation">معطيات المرة السابقة</string>
+    <string name="locationunready">المرجو التأكد من إعدادات GPS و المحاولة مرة أخرى</string>
+    <string name="gpsplz">تأكد من إعدادات GPS لتتمكن من تحديد اتجاه القبلة</string>
+    <string name="consignes">تعليمات</string>
+    <string name="qiblatips">للحصول على اتجاه دقيق، المرجو وضع الهاتف على سطح مستو، التأكد من اعدادات GPS ثم إعادة الدخول إلى هذه القائمة.</string>
+    <string name="longitude">خط الطول</string>
+    <string name="latitude">خط العرض</string>
+
 </resources>

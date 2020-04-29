@@ -42,7 +42,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id10 =intent.getIntExtra("NotifId10",0);
         int hh10 = intent.getIntExtra("NotifTimeHH10",0);
         int mm10 = intent.getIntExtra("NotifTimeMM10",0);
-        if (id10!=0 && hh<=hh10 && mm<=mm10) {
+        if (id10!=0 && hh<=hh10 && mm<=mm10+15) {
             createNotif(context, contentIntent, id10, title10, message10,"الورد اليومي");
         }
         random1 = rng.nextInt(NotifMessages.size());
@@ -52,7 +52,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id11 =intent.getIntExtra("NotifId11",0);
         int hh11 = intent.getIntExtra("NotifTimeHH11",0);
         int mm11 = intent.getIntExtra("NotifTimeMM11",0);
-        if (id11!=0 && hh<=hh11 && mm<=mm11) {
+        if (id11!=0 && hh<=hh11 && mm<=mm11+15) {
             createNotif(context, contentIntent, id11, title11, message11,"الورد اليومي");
         }
         int random2 = rng.nextInt(NotifSalatMessages.size());
@@ -61,7 +61,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id1 =intent.getIntExtra("NotifId1",0);
         int hh1 = intent.getIntExtra("NotifTimeHH1",0);
         int mm1 = intent.getIntExtra("NotifTimeMM1",0);
-        if (id1!=0 && hh<=hh1 && mm<=mm1 ) {
+        if (id1!=0 && hh<=hh1 && mm<=mm1+5 ) {
             createNotif(context, contentIntent, id1, title1, message1,"أوقات الصلاة");
         }
         random2 = rng.nextInt(NotifSalatMessages.size());
@@ -70,7 +70,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id2 =intent.getIntExtra("NotifId2",0);
         int hh2 = intent.getIntExtra("NotifTimeHH2",0);
         int mm2 = intent.getIntExtra("NotifTimeMM2",0);
-        if (id2!=0 && hh<=hh2 && mm<=mm2) {
+        if (id2!=0 && hh<=hh2 && mm<=mm2+5) {
             createNotif(context, contentIntent, id1, title2, message2,"أوقات الصلاة");
         }
         random2 = rng.nextInt(NotifSalatMessages.size());
@@ -79,7 +79,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id3 =intent.getIntExtra("NotifId3",0);
         int hh3 = intent.getIntExtra("NotifTimeHH3",0);
         int mm3 = intent.getIntExtra("NotifTimeMM3",0);
-        if (id3!=0 && hh<=hh3 && mm<=mm3) {
+        if (id3!=0 && hh<=hh3 && mm<=mm3+5) {
             createNotif(context, contentIntent, id3, title3, message3,"أوقات الصلاة");
         }
         random2 = rng.nextInt(NotifSalatMessages.size());
@@ -88,7 +88,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id4 =intent.getIntExtra("NotifId4",0);
         int hh4 = intent.getIntExtra("NotifTimeHH4",0);
         int mm4 = intent.getIntExtra("NotifTimeMM4",0);
-        if (id4!=0 && hh<=hh4 && mm<=mm4) {
+        if (id4!=0 && hh<=hh4 && mm<=mm4+5) {
             createNotif(context, contentIntent, id4, title4, message4,"أوقات الصلاة");
         }
         random2 = rng.nextInt(NotifSalatMessages.size());
@@ -97,11 +97,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         int id5 =intent.getIntExtra("NotifId5",0);
         int hh5 = intent.getIntExtra("NotifTimeHH5",0);
         int mm5 = intent.getIntExtra("NotifTimeMM5",0);
-        if (id5!=0 && hh<=hh5 && mm<=mm5 ) {
+        if (id5!=0 && hh<=hh5 && mm<=mm5+5 ) {
             createNotif(context, contentIntent, id5, title5, message5, "أوقات الصلاة");
-            System.out.println("id5 "+id5);
-            System.out.println(" "+ hh +" "+hh5);
-            System.out.println(" "+ mm + " "+mm5);
         }
     }
 

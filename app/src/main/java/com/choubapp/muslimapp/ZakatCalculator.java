@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-
 public class ZakatCalculator extends AppCompatActivity {
     TextView ToUnderline;
     EditText GoldPrice,TotalPrice;

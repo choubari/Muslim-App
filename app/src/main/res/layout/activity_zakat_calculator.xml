@@ -40,7 +40,13 @@
         android:gravity="center"
         android:fontFamily="@font/changa_light"
         android:text="@string/zakatcalcul"/>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -100,6 +106,10 @@
         android:gravity="center"
         android:onClick="LocalPriceGold"
         android:text="@string/localgoldprice"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,4 +135,7 @@
         android:fontFamily="@font/changa_light"
         android:textSize="16sp"
         android:gravity="center" />
+    </LinearLayout>
+    </TableLayout>
+    </ScrollView>
 </LinearLayout>

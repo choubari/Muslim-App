@@ -1,19 +1,12 @@
 package com.choubapp.muslimapp;
 
 import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.Switch;
-import android.widget.Toast;
-
-import static com.choubapp.muslimapp.AboutUs.setCurrentTheme;
 
 public class AboutUs extends AppCompatActivity {
     SharedPreferences prefs;

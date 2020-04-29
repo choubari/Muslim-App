@@ -20,6 +20,13 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:textSize="24sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -167,4 +174,6 @@
             android:layout_marginEnd="10dp"
             android:text="@string/isha" />
     </LinearLayout>
+    </TableLayout>
+    </ScrollView>
 </LinearLayout>
