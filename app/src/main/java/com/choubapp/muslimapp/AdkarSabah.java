@@ -12,6 +12,8 @@ public class AdkarSabah extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences prefs = getSharedPreferences(MainActivity.THEME_KEY,0);

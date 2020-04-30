@@ -20,4 +20,55 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:textSize="24sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="@string/widgetactivation"
+                android:fontFamily="@font/changa_light"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:text="@string/instruction1"
+                android:fontFamily="@font/changa_light"/>
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/choose_widgets"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:text="@string/instruction2"
+                android:fontFamily="@font/changa_light"/>
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/our_widget"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:text="@string/instruction3"
+                android:fontFamily="@font/changa_light"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:text="@string/instruction4"
+                android:fontFamily="@font/changa_light"/>
+        </TableLayout>
+    </ScrollView>
 </LinearLayout>

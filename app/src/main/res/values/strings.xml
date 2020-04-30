@@ -47,6 +47,7 @@
     <string name="menu_set1">التطبيقات</string>
     <string name="menu_set2">الملحقات</string>
     <string name="menu_set3">الإعدادات</string>
+    <string name="adkar_sabah_massaa">أذكار الصباح و المساء</string>
 
     <!--About Us Menu Strings-->
     <string name="notifications">التنبيهات</string>
@@ -203,5 +204,12 @@
     <string name="qiblatips">للحصول على اتجاه دقيق، المرجو وضع الهاتف على سطح مستو، التأكد من اعدادات GPS ثم إعادة الدخول إلى هذه القائمة.</string>
     <string name="longitude">خط الطول</string>
     <string name="latitude">خط العرض</string>
+
+    <!--Widget Menu Strings-->
+    <string name="widgetactivation">بدخولك هذه القائمة، تكون قد فعلت لديك ميزة سطح الهاتف.</string>
+    <string name="instruction1">-للإستفادة من أذكار الصباح و المساء على سطح هاتفك، عليك التوجه لقائمة widgets بهاتفك.</string>
+    <string name="instruction2">-ثم تسحب widget الخاصة بتطبيق حصن المسلم على سطح هاتفك.</string>
+    <string name="instruction3">-يمكنك زيادة حجمها لتستطيع قراءة جميع الأذكار بشكل جيد.</string>
+    <string name="instruction4">-و في الأخير ما عليك إلا السحب للأعلى أو الأسفل للإنتقال للدعاء الموالي أو السابق.</string>
 
 </resources>

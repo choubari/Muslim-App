@@ -138,7 +138,9 @@ public class QiblaFinder extends AppCompatActivity {
     @SuppressLint("MissingPermission")
     public void getBearing(){
         // Get the location manager
-        float QiblaDegree = GetFloat("QiblaDegree");
+
+        fetch_GPS();
+        /*float QiblaDegree = GetFloat("QiblaDegree");
         if(QiblaDegree > 0.0001){
             text_down.setText(getResources().getString(R.string.coord) +" "+getResources().getString(R.string.lastlocation));
             text_up.setText(getResources().getString(R.string.qibladirection) +" " + QiblaDegree + " " + getResources().getString(R.string.fromnorth));
@@ -146,7 +148,7 @@ public class QiblaFinder extends AppCompatActivity {
         }else
         {
             fetch_GPS();
-        }
+        }*/
     }
 
 

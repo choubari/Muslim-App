@@ -32,7 +32,9 @@
         <activity android:name=".AdkarMassaa" />
         <activity android:name=".AdkarSabah" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Splash">
+        <activity android:name=".Splash"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,14 +49,28 @@
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="xandroid.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+
+        <receiver android:name=".WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@layout/widget_info" />
+        </receiver>
+        <service
+            android:name=".WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
     </application>
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
