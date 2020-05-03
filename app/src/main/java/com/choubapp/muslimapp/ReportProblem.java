@@ -32,7 +32,7 @@ public class ReportProblem extends AppCompatActivity {
         });
     }
     private void sendMail() {
-        String recipient = "choubari.kawtar@gmail.com" ;
+        String recipient = "choubapps@gmail.com" ;
         String subject = mEditTextSubject.getText().toString();
         String message = mEditTextMessage.getText().toString();
 
