@@ -90,7 +90,13 @@ public class AboutUs extends AppCompatActivity {
         startActivity(intent);
     }
     public void RateApp (View v){
-
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=" + getPackageName())));
+        } catch (ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+        }
     }
 
 
