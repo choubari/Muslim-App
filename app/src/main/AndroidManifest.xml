@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppThemee">
         <activity android:name=".SalatSettings"/>
         <activity android:name=".GoldPrice" />
