@@ -21,12 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <StackView
-            android:id="@+id/example_widget_stack_view"
+        <ListView
+            android:id="@+id/adapterViewFlipper"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:loopViews="true"
-            />
+            android:layout_height="match_parent"
+            android:autoStart="false"
+            android:loopViews="true"/>
 
 
         <TextView
@@ -39,7 +39,6 @@
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
-
     </FrameLayout>
 
 </LinearLayout>

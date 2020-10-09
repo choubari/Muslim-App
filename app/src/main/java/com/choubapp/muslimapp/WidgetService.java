@@ -1,9 +1,12 @@
 package com.choubapp.muslimapp;
 
+import android.annotation.SuppressLint;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
@@ -15,11 +18,14 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import static android.util.TypedValue.COMPLEX_UNIT_SP;
+
 public class WidgetService  extends RemoteViewsService {
 
     @Override
     public RemoteViewsFactory onGetViewFactory(Intent intent) {
         return new WidgetItemFactory(getApplicationContext(), intent);
+
     }
 
     class WidgetItemFactory implements RemoteViewsFactory {
@@ -49,6 +55,7 @@ public class WidgetService  extends RemoteViewsService {
 
         }
 
+
         @Override
         public void onDataSetChanged() {
 
@@ -64,11 +71,26 @@ public class WidgetService  extends RemoteViewsService {
            return AdkarWidgetList.size();
         }
 
+        @SuppressLint("ResourceAsColor")
         @Override
         public RemoteViews getViewAt(int position) {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_item);
             views.setTextViewText(R.id.widget_item_text,AdkarWidgetList.get(position).getDouaa());
-            views.setTextViewText(R.id.widget_item_times, AdkarWidgetList.get(position).getTimes());
+            views.setTextViewText(R.id.widget_item_times,AdkarWidgetList.get(position).getTimes());
+            /*if (AdkarWidgetList.get(position).getDouaa().equals(getString(R.string.menu_sunrise))){
+                //views.setTextColor(R.id.widget_item_text,R.color.colorAccent);
+                views.setTextViewTextSize(R.id.widget_item_text,COMPLEX_UNIT_SP,24);
+
+            }*/
+           /* Bundle extras = new Bundle();
+            extras.putInt(WidgetProvider.NEXT_ACTION, position);
+            Intent fillInIntent = new Intent();
+            fillInIntent.putExtras(extras);
+            // Make it possible to distinguish the individual on-click
+            // action of a given item
+            views.setOnClickFillInIntent(R.id.widget_item_text, fillInIntent);
+
+            System.out.println("I ADD A VIEW"); */
             SystemClock.sleep(500);
             return views;
         }

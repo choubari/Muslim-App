@@ -6,7 +6,6 @@
     android:minWidth="110dp"
     android:previewImage="@drawable/thumb"
     android:resizeMode="vertical|horizontal"
-    android:updatePeriodMillis="3600000"
     android:widgetCategory="home_screen"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>

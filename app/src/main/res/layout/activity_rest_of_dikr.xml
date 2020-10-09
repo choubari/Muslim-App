@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestOfDikr">
+    <TextView
+        android:id="@+id/fadladkartitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/changa_bold"
+        android:text="@string/restofdikr"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="-2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textSize="24sp" />
+
+</RelativeLayout>

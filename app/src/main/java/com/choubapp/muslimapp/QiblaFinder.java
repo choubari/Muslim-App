@@ -2,15 +2,15 @@ package com.choubapp.muslimapp;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +21,14 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static android.view.View.INVISIBLE;
 
 public class QiblaFinder extends AppCompatActivity {
@@ -30,10 +38,11 @@ public class QiblaFinder extends AppCompatActivity {
     private ImageView imageDial;
     private TextView text_up;
     private TextView text_down;
-   public MenuItem item;
     private float currentAzimuth;
     SharedPreferences prefs;
     GPSTracker gps;
+    private InterstitialAd mInterstitialAd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +63,23 @@ public class QiblaFinder extends AppCompatActivity {
         arrowViewQiblat.setVisibility(INVISIBLE);
         arrowViewQiblat.setVisibility(View.GONE);
 
-        setupCompass();
 
+
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.Interstitial_Qibla));
+        mInterstitialAd.loadAd(new AdRequest.Builder()
+                .build());
+        mInterstitialAd.setAdListener(new com.google.android.gms.ads.AdListener() {
+            @Override
+            public void onAdLoaded() {
+                mInterstitialAd.show();
+                super.onAdLoaded();
+            }
+        });
+
+
+        setupCompass();
     }
     @Override
     protected void onStart() {
@@ -100,7 +124,7 @@ public class QiblaFinder extends AppCompatActivity {
             text_down.setText(getResources().getString(R.string.permission_not_garanted));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-            }
+            }else{getBearing();}
         }
         compass = new Compass(this);
         Compass.CompassListener cl = new Compass.CompassListener() {
@@ -163,9 +187,10 @@ public class QiblaFinder extends AppCompatActivity {
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // permission was granted, yay! Do the
                     SaveBoolean("permission_granted", true);
-                    text_down.setText(getResources().getString(R.string.permissiongaranted));
-                    arrowViewQiblat.setVisibility(INVISIBLE);
-                    arrowViewQiblat.setVisibility(View.GONE);
+                    getBearing();
+                    //text_down.setText(getResources().getString(R.string.permissiongaranted));
+                    //arrowViewQiblat.setVisibility(INVISIBLE);
+                    //arrowViewQiblat.setVisibility(View.GONE);
 
                 } else {
                     finish();

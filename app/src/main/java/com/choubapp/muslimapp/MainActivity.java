@@ -7,14 +7,22 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> NotifSalatMessages = new ArrayList<>();
    // private ArrayList<String> mPrayerTimes,mRetrievedPrayerTimes;
     TextView mFajr,mDuhur,mAsr,mMaghrib,mIsha,mCity;
+    ScrollView content;
+    private AdView mAdView;
 
     //String PrayerCity = "kenitra";
 
@@ -39,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         AboutUs.setCurrentTheme(this, thm);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        content=findViewById(R.id.scrollscreen);
         NotifMessages();
         SharedPreferences preff = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean firstStart = preff.getBoolean("firstStartDialog", true);
@@ -52,7 +62,35 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), getString(R.string.internetlost), Toast.LENGTH_SHORT).show();
             LoadPreviousSalatData();
         }
-    }
+
+        mAdView = findViewById(R.id.adViewmain);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                Resources r = getResources();
+                int px = (int) TypedValue.applyDimension(
+                        TypedValue.COMPLEX_UNIT_DIP,
+                        50,
+                        r.getDisplayMetrics()
+                );
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT
+                );
+                content.setLayoutParams(params);
+                params.setMargins(0, 0, 0, px);
+            }
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                Log.d("onAdFailedToLoad", "This is why: "+errorCode);
+            }
+        });
+
+        }
 
     public void NotifMessages(){
         NotifMessages.add(getString(R.string.menu_fadlGod1)+" ”"+getString(R.string.thought1)+"“");
@@ -209,6 +247,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(this,AdkarMassaa.class);
         startActivity(intent);
     }
+    public void namesofAllah(View v){
+        Intent intent= new Intent(this,NamesOfAllah.class);
+        startActivity(intent);
+    }
+    public void restofdikr(View v){
+        Intent intent= new Intent(this,RestOfDikr.class);
+        startActivity(intent);
+    }
     public void fadladkar(View v){
         Intent intent= new Intent(this,FadlAdkar.class);
         startActivity(intent);
@@ -273,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void showStartDialog() {
          new AlertDialog.Builder(this,R.style.AlertDialogCustom)
-                .setTitle(getString(R.string.ramadankareem))
+                .setTitle(getString(R.string.hello))
                 .setMessage(getString(R.string.firstalertdialogmsg))
                 .setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                     @Override
@@ -322,6 +368,7 @@ public class MainActivity extends AppCompatActivity {
         int maghriboff =salatpref.getInt("maghriboffset",0);
         int ishaoff =salatpref.getInt("ishaoffset",0);
         String fajr,duhur,asr,maghrib,isha;
+        Boolean Passed=false;
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -346,7 +393,7 @@ public class MainActivity extends AppCompatActivity {
                     asr = prayertimes.getString("Asr");
                     maghrib = prayertimes.getString("Maghrib");
                     isha = prayertimes.getString("Isha");
-
+                    Passed =true;
                 } catch (final JSONException e) {
                     Log.e("TAG", "Json parsing error: " + e.getMessage());
                     runOnUiThread(new Runnable() {
@@ -393,29 +440,31 @@ public class MainActivity extends AppCompatActivity {
             mAsr.setText(asr);
             mMaghrib.setText(maghrib);
             mIsha.setText(isha);
-            String[] time1 = fajr.split ( ":" );
-            int hh1 = Integer.parseInt ( time1[0].trim() );
-            int mm1 = Integer.parseInt ( time1[1].trim() );
-            String[] time2 = duhur.split ( ":" );
-            int hh2 = Integer.parseInt ( time2[0].trim() );
-            int mm2 = Integer.parseInt ( time2[1].trim() );
-            String[] time3 = asr.split ( ":" );
-            int hh3 = Integer.parseInt ( time3[0].trim() );
-            int mm3 = Integer.parseInt ( time3[1].trim() );
-            String[] time4 = maghrib.split ( ":" );
-            int hh4 = Integer.parseInt ( time4[0].trim() );
-            int mm4 = Integer.parseInt ( time4[1].trim() );
-            String[] time5 = isha.split ( ":" );
-            int hh5 = Integer.parseInt ( time5[0].trim() );
-            int mm5 = Integer.parseInt ( time5[1].trim() );
+            if (Passed) {
+                String[] time1 = fajr.split(":");
+                int hh1 = Integer.parseInt(time1[0].trim());
+                int mm1 = Integer.parseInt(time1[1].trim());
+                String[] time2 = duhur.split(":");
+                int hh2 = Integer.parseInt(time2[0].trim());
+                int mm2 = Integer.parseInt(time2[1].trim());
+                String[] time3 = asr.split(":");
+                int hh3 = Integer.parseInt(time3[0].trim());
+                int mm3 = Integer.parseInt(time3[1].trim());
+                String[] time4 = maghrib.split(":");
+                int hh4 = Integer.parseInt(time4[0].trim());
+                int mm4 = Integer.parseInt(time4[1].trim());
+                String[] time5 = isha.split(":");
+                int hh5 = Integer.parseInt(time5[0].trim());
+                int mm5 = Integer.parseInt(time5[1].trim());
 
-            scheduleNotification(getApplicationContext(),10,hh1,mm1);
-            scheduleNotification(getApplicationContext(),11,hh3,mm3);
-            scheduleNotification(getApplicationContext(),1,hh1,mm1);
-            scheduleNotification(getApplicationContext(),2,hh2,mm2);
-            scheduleNotification(getApplicationContext(),3,hh3,mm3);
-            scheduleNotification(getApplicationContext(),4,hh4,mm4);
-            scheduleNotification(getApplicationContext(),5,hh5,mm5);
+                scheduleNotification(getApplicationContext(), 10, hh1, mm1);
+                scheduleNotification(getApplicationContext(), 11, hh3, mm3);
+                scheduleNotification(getApplicationContext(), 1, hh1, mm1);
+                scheduleNotification(getApplicationContext(), 2, hh2, mm2);
+                scheduleNotification(getApplicationContext(), 3, hh3, mm3);
+                scheduleNotification(getApplicationContext(), 4, hh4, mm4);
+                scheduleNotification(getApplicationContext(), 5, hh5, mm5);
+            }
         }
     }
 

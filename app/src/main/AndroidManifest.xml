@@ -10,8 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppThemee">
-        <activity android:name=".SalatSettings"/>
+        android:theme="@style/AppThemee"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".NamesOfAllah"></activity>
+        <activity android:name=".RestOfDikr" />
+        <activity android:name=".SalatSettings" />
         <activity android:name=".GoldPrice" />
         <activity android:name=".ReportProblem" />
         <activity android:name=".PrivacyPolicy" />
@@ -22,8 +25,14 @@
         </activity>
         <activity android:name=".Widgets" />
         <activity android:name=".Wallpapers" />
-        <activity android:name=".Misbaha" />
-        <activity android:name=".ZakatCalculator" />
+        <activity
+            android:name=".Misbaha"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ZakatCalculator"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".QiblaFinder"
             android:screenOrientation="portrait"
@@ -32,7 +41,8 @@
         <activity android:name=".AdkarMassaa" />
         <activity android:name=".AdkarSabah" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Splash"
+        <activity
+            android:name=".Splash"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
@@ -41,6 +51,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AdAppID" />
 
         <receiver
             android:name=".AlarmReceiver"
@@ -55,20 +69,29 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".WidgetProvider">
             <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@layout/widget_info" />
         </receiver>
+
         <service
             android:name=".WidgetService"
+            android:exported="false"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
