@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="270dp"
-    android:layout_height="300dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="vertical"
     android:gravity="center"
@@ -13,10 +13,11 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="Item"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:fontFamily="@font/almushaf"
         android:textColor="@color/colorPrimary"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        />
     <TextView
         android:id="@+id/widget_item_times"
         android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
         android:layout_gravity="bottom"
         android:gravity="bottom"
         android:text="Item"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:fontFamily="@font/changa_bold"
         android:textColor="@color/colorGrey"
         android:textStyle="bold"

@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.choubapp.muslimapp"
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 1
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 2
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -16,8 +16,17 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -38,7 +47,6 @@ dependencies {
     //noinspection GradleCompatible
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation('com.google.android.gms:play-services-location:15.0.0') {
-        exclude group: 'com.android.support', module: 'support-v7'
-    }
+    implementation 'com.google.android.gms:play-services-ads:17.1.0'
+    implementation('com.google.android.gms:play-services-location:16.0.0')
 }

@@ -24,6 +24,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -44,6 +47,9 @@ public class SalatSettings extends AppCompatActivity {
     double mLongitude, mLatitude;
     String mCity;
     TextView DisplayCity, FajrOff, DuhurOff, AsrOff, MaghribOff,IshaOff;
+
+    private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences prefs = getSharedPreferences(THEME_KEY,0);
@@ -51,9 +57,28 @@ public class SalatSettings extends AppCompatActivity {
         AboutUs.setCurrentTheme(this, thm);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salat_settings);
+
+
+        //--------ADS
+        mInterstitialAd = new InterstitialAd(this);
+        // TO RE-SET
+        mInterstitialAd.setAdUnitId(getString(R.string.Interstitial_SalatSettings)); //real
+        //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712"); //test
+
+        mInterstitialAd.loadAd(new AdRequest.Builder()
+                .build());
+        mInterstitialAd.setAdListener(new com.google.android.gms.ads.AdListener() {
+            @Override
+            public void onAdLoaded() {
+                mInterstitialAd.show();
+                super.onAdLoaded();
+            }
+        });
+
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         //getLastLocation();
         initiateData();
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -230,6 +255,7 @@ public class SalatSettings extends AppCompatActivity {
                 LocationManager.NETWORK_PROVIDER
         );
     }
+    //----------------------------
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -242,9 +268,9 @@ public class SalatSettings extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (checkPermissions()) {
-            getLastLocation();
-        }
+        //if (checkPermissions()) {
+          //  getLastLocation();
+        //}
     }
     public void FindCity(double MyLat, double MyLong) {
         //double MyLat = 33.97159194946289;
