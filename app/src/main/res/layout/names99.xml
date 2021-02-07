@@ -4,17 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="7dp"
+    android:padding="5dp"
+    app:cardBackgroundColor="@color/lightblue"
     app:cardCornerRadius="8dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_margin="4dp">
         <TextView
             android:id="@+id/names99"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1"
-            android:fontFamily="@font/allah_names"
+            android:textAlignment="center"
+            android:fontFamily="@font/allah_names_white"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:layout_centerHorizontal="true"
             android:textSize="60sp"/>

@@ -1,11 +1,14 @@
 package com.choubapp.muslimapp;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -17,6 +20,7 @@ import java.util.List;
 public class NamesOfAllah extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
+    private TextView mTextView;
     //private RecyclerView.LayoutManager mLayoutManager;
     private InterstitialAd mInterstitialAd;
 
@@ -42,6 +46,7 @@ public class NamesOfAllah extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_names_of_allah);
+
         //ArrayList<String> Names = new ArrayList<>();
         List<String> names = Arrays.asList( "1", "2", "3","4","5","6","7","8","9","a","b","c","d","e",
                 "f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
@@ -63,5 +68,6 @@ public class NamesOfAllah extends AppCompatActivity {
         //mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setLayoutManager(new RtlGridLayoutManager(this, 3));
         mRecyclerView.setAdapter(mAdapter);
+
     }
 }

@@ -1,6 +1,7 @@
 package com.choubapp.muslimapp;
 
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -141,7 +142,8 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setAutoCancel(true)
                 .setOnlyAlertOnce(true)
                 .build();
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        NotificationManager notificationManager=(NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+        //NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.notify(id, notification);
     }
 }

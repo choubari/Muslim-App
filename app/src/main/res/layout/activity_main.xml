@@ -265,6 +265,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:src="@drawable/isha" />
 
             </RelativeLayout>
@@ -294,6 +296,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:layout_alignParentBottom="true"
                     android:src="@drawable/sunrise" />
             </RelativeLayout>
@@ -329,6 +333,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:src="@drawable/dikr" />
             </RelativeLayout>
 
@@ -357,6 +363,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:layout_alignParentBottom="true"
                     android:src="@drawable/allahname" />
             </RelativeLayout>
@@ -392,6 +400,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:src="@drawable/tesbiha" />
             </RelativeLayout>
 
@@ -421,6 +431,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:src="@drawable/azkar" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
@@ -454,6 +466,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:src="@drawable/zakat" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
@@ -481,6 +495,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="75dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:src="@drawable/qiblaa" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
@@ -538,6 +554,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
                         android:layout_marginBottom="3dp"
                         android:src="@drawable/widget" />
                 </RelativeLayout>
@@ -566,6 +584,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
                         android:layout_marginBottom="3dp"
                         android:src="@drawable/wallpp" />
                 </RelativeLayout>
@@ -624,6 +644,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
                         android:layout_marginBottom="3dp"
                         android:src="@drawable/share" />
                 </RelativeLayout>
@@ -653,6 +675,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
                         android:layout_marginBottom="3dp"
                         android:src="@drawable/settings" />
                 </RelativeLayout>
