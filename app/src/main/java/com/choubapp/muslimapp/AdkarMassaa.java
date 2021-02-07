@@ -33,7 +33,7 @@ public class AdkarMassaa extends AppCompatActivity {
         setContentView(R.layout.activity_adkar_massaa);
 
         content=findViewById(R.id.contentlayoutt);
-
+        //load AD
         mAdView = findViewById(R.id.adVieww);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();

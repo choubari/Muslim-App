@@ -1,5 +1,6 @@
 package com.choubapp.muslimapp;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,15 +27,26 @@ public class Misbaha extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
         mAdView.loadAd(adRequest);
-
+        SharedPreferences sp = getSharedPreferences("tallycounter", Activity.MODE_PRIVATE);
+        int myIntValue = sp.getInt("counter", 0);
+        showcounter=findViewById(R.id.counter_text);
+        showcounter.setText(""+myIntValue);
     }
     public void reset(View v){
         showcounter=findViewById(R.id.counter_text);
         showcounter.setText("0");
+        SharedPreferences sp = getSharedPreferences("tallycounter", Misbaha.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("counter", 0);
+        editor.commit();
     }
     public void counter (View v){
         showcounter=findViewById(R.id.counter_text);
         count= 1 + Integer.parseInt((String) showcounter.getText()) ;
         showcounter.setText(""+count);
+        SharedPreferences sp = getSharedPreferences("tallycounter", Misbaha.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("counter", count);
+        editor.commit();
     }
 }

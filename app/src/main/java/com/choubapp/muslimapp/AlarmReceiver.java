@@ -125,7 +125,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         long[] pattern = { 0, 100, 200, 300 };
         Notification notification = new NotificationCompat.Builder(context, CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.iconwhitebg)
+                .setSmallIcon(R.drawable.appicon_rounded)
                 .setContentTitle(ttl)
                 .setContentText(msg)
                 .setStyle(new NotificationCompat.BigTextStyle()

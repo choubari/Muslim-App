@@ -47,7 +47,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="80dp"
-                android:src="@drawable/thumb"/>
+                android:src="@drawable/appicon_rounded"/>
         </RelativeLayout>
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -667,7 +667,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
+        ads:adSize="SMART_BANNER"
         ads:adUnitId="@string/Home_Banner">
     </com.google.android.gms.ads.AdView>
 </RelativeLayout>

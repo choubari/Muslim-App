@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/namesofAllah"
         android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:id="@+id/intro"
@@ -59,4 +60,19 @@
         android:fontFamily="@font/changa_bold"
         android:text="@string/namesList"/>
     -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contentlayout"
+        android:layout_below="@+id/intro">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@color/colorAccent"
+            android:scrollbarSize="5dp"
+            android:padding="4dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
 </RelativeLayout>

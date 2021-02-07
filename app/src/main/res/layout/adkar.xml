@@ -17,7 +17,7 @@
             android:fontFamily="@font/almushaf"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:textSize="20sp"/>
+            android:textSize="22sp"/>
 
         <TextView
             android:id="@+id/times"

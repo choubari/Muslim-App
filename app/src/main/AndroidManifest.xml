@@ -5,14 +5,26 @@
 
     <application
         android:name=".NotifsChannels"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppThemee"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NamesOfAllah"></activity>
+        <activity android:name=".HajjOmraDikrActivity"></activity>
+        <activity android:name=".NatureDikrActivity" />
+        <activity android:name=".SickDikrActivity" />
+        <activity android:name=".TravelDikrActivity" />
+        <activity android:name=".FoodDikrActivity" />
+        <activity android:name=".HomeDikrActivity" />
+        <activity android:name=".WuduuDikrActivity" />
+        <activity android:name=".MosqueDikrActivity" />
+        <activity android:name=".AdhanDikrActivity" />
+        <activity android:name=".SalatDikrActivity" />
+        <activity android:name=".NamesOfAllah" />
         <activity android:name=".RestOfDikr" />
         <activity android:name=".SalatSettings" />
         <activity android:name=".GoldPrice" />
