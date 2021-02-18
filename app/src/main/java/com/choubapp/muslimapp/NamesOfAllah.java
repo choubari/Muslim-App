@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -21,7 +22,7 @@ public class NamesOfAllah extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private TextView mTextView;
-    //private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView.LayoutManager mLayoutManager;
     private InterstitialAd mInterstitialAd;
 
     @Override
@@ -54,7 +55,7 @@ public class NamesOfAllah extends AppCompatActivity {
                 "V","W","X","Y","Z","\"","#","$","%","&","'","(",")","*","+",",","-",".","/","0",":",
                 ";","<","=",">","?","@","[","\\","]","^","_","`","{","|","}","~","¡","¢","£","¤","¥","¦","!");
 
-
+        //List<String> names = Arrays.asList("الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز","الله","الودود","المعز");
         ArrayList<Names99> AllahNames = new ArrayList<>();
         for (int i =0; i<names.size(); i++){
             AllahNames.add(new Names99(names.get(i)));
@@ -63,10 +64,12 @@ public class NamesOfAllah extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
-        //mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setClipChildren(false);
         mAdapter = new Names99Adapter(AllahNames);
-        //mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setLayoutManager(new RtlGridLayoutManager(this, 3));
+        mLayoutManager = new GridLayoutManager(this, 3);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        //mRecyclerView.setLayoutManager(new RtlGridLayoutManager(this, 3));
         mRecyclerView.setAdapter(mAdapter);
 
     }

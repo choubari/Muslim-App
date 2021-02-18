@@ -10,8 +10,8 @@
         <item name="cardBackgroundColor">@color/colorPrimary</item>
         <item name="cardViewStyle">@style/AppTheme</item>
         <item name="android:windowBackground">@drawable/wallpaper</item>
-
     </style>
+
     <style name="AppThemee" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
