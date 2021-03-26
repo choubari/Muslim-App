@@ -49,10 +49,12 @@ Graphic elements and icons: [Freepik](freepik.com) , [FlatIcon](flaticon.com) an
 
 Qibla Menu inspired from [this repository](https://github.com/rhmkds/kiblat-android) 
 
+## :loudspeaker: Looking for collaborators :
+I'm quite busy and I can't maintain the project frequently (adding new features and fixing API compatibility issues). If you want to be a collaborator on the project, please feel free to contact me on [instagram](https://www.instagram.com/choubari_/) ! You've to be passionate about programming and interested on developping islamic apps and on open source contributions.
 
 ## :copyright: Credits & Support:
 
-I made this app open-source to help you guys when you're looking for some Islamic apps here in github. Please give me proper credit by linking back to my github account or any other social media account! Just Like what I did with Qibla Menu. Shall I republish it on PlayStore? Of course Not, just because the name of the licence has the words "open" or "free" doesn't mean you can use it for commercial purposes. I put to much time and efforts on it and i publish it to PlayStore just to let you test it before copying some code. All I ask is to not claim these efforts as your own. You can reach me on [instagram](https://www.instagram.com/choubari_/) or [twitter]()https://twitter.com/choubari_) for further information.
+I made this app open-source to help you guys when you're looking for some Islamic apps here in github. Please give me proper credit by linking back to my github account or any other social media account! Just Like what I did with Qibla Menu. Shall I republish it on PlayStore? Of course Not, just because the name of the licence has the words "open" or "free" doesn't mean you can use it for commercial purposes. I put to much time and efforts on it and i publish it to PlayStore just to let you test it before copying some code. All I ask is to not claim these efforts as your own. You can reach me on [Instagram](https://www.instagram.com/choubari_/) or [Twitter](https://twitter.com/choubari_) for further information.
 
 **Free Support:**
 
