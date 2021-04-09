@@ -1,7 +1,7 @@
 # Muslim-App (Daily Muslim's Fortress App)
 
 <p align="center">
-  <img  src="Screenshots/promo.jpg" width="600px" heigh="600px" >
+  <img  src="Screenshots/promo.jpg" width="600px" >
 
 The app is available only in Arabic but I'm planning to release an English version very soon.
 
