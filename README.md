@@ -47,7 +47,7 @@ We hit 100+ Downloads on PlayStore :
 
 Graphic elements and icons: [Freepik](freepik.com) , [FlatIcon](flaticon.com) and [icon8](icons8.com)
 
-Qibla Menu inspired from [this repository](https://github.com/rhmkds/kiblat-android) 
+Qibla Menu inspired from [this repository](https://github.com/najamiqbal/kiblat-Campass-android) 
 
 ## :loudspeaker: Looking for collaborators :
 I'm quite busy and I can't maintain the project frequently (adding new features and fixing API compatibility issues). If you want to be a collaborator on the project, please feel free to contact me on [instagram](https://www.instagram.com/choubari_/) ! You've to be passionate about programming and interested on developping islamic apps and on open source contributions.
