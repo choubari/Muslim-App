@@ -42,7 +42,7 @@ and other features will be added on the next updates ...
 ## :tada: Download : 
 
 We hit 100+ Downloads on PlayStore :
-*The last release will be deployed soon*
+*The last stable release will be deployed soon*
 
 <!--
 <p align="center">
