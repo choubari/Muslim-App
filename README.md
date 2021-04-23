@@ -34,14 +34,21 @@ and other features will be added on the next updates ...
 - [ ] Fix Notifications on API level 26 and plus
 - [x] Seperate Ads codes on a different file (added to .gitignore)
 
+### In progress : 
+- [ ] Implementing English Translation.
+- [ ] Provide Google testing Ads codes on a different file to avoid missing string errors for new contributors.
+
 
 ## :tada: Download : 
 
 We hit 100+ Downloads on PlayStore :
 *The last release will be deployed soon*
 
+<!--
 <p align="center">
  <a href='https://play.google.com/store/apps/details?id=com.choubapp.muslimapp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/ width="300px" heigh="100px" ></a>
+-->
+
 
 ## :link: Ressources : 
 
