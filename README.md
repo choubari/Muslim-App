@@ -39,10 +39,11 @@ and other features will be added on the next updates ...
 - [ ] Provide Google testing Ads codes on a different file to avoid missing string errors for new contributors.
 
 
-## :tada: Download Beta Version: 
+## :tada: Download *Beta Version*: 
 
 We hit 100+ Downloads on PlayStore :
-*The last stable release will be deployed soon*
+
+*Still in Beta version, please if you find any issue or you want to suggest a feature, feel free to open an issue.*
 
 
 <p align="center">
