@@ -51,7 +51,7 @@ We hit 100+ Downloads on PlayStore :
 
 
 
-## :link: Ressources : 
+## :link: Resources : 
 
 Graphic elements and icons: [Freepik](freepik.com) , [FlatIcon](flaticon.com) and [icon8](icons8.com)
 
