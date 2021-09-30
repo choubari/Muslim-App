@@ -41,7 +41,7 @@ and other features will be added on the next updates ...
 
 ## :tada: Download *Beta Version*: 
 
-We hit 100+ Downloads on PlayStore :
+We hit 500+ Downloads on PlayStore :
 
 *Still in Beta version, please if you find any issue or you want to suggest a feature, feel free to open an issue.*
 
