@@ -3,7 +3,17 @@
 <p align="center">
   <img  src="Screenshots/promo.jpg" width="600px" >
 
-The app is available only in Arabic but I'm planning to release an English version very soon.
+The app is available only in Arabic ~~but I'm planning to release an English version very soon~~.
+
+---
+
+**This repo will be deprecated and archived soon**
+
+_The project will be migrated to another language and linked to this repository once ready._
+
+Wanna discuss that with me? reach me on [Twitter](https://twitter.com/choubari_) or [Instagram](https://instagram.com/choubari_).
+
+---
 
 ## :sparkles: Features:
 
@@ -37,11 +47,11 @@ and other features will be added on the next updates ...
 
 ### In progress :
 
-- [ ] Implementing English Translation.
+- [ ] Implementing English Translation (string translations available at the `another` branch).
 
 ## :tada: Download _Beta Version_:
 
-We hit 500+ Downloads on PlayStore :
+We hit 1K+ Downloads on PlayStore :
 
 _Still in Beta version, please if you find any issue or you want to suggest a feature, feel free to open an issue._
 
@@ -53,10 +63,6 @@ _Still in Beta version, please if you find any issue or you want to suggest a fe
 Graphic elements and icons: [Freepik](freepik.com) , [FlatIcon](flaticon.com) and [icon8](icons8.com)
 
 Qibla Menu inspired from [this repository](https://github.com/najamiqbal/kiblat-Campass-android)
-
-## :loudspeaker: Looking for collaborators :
-
-I'm quite busy and I can't maintain the project frequently (adding new features and fixing API compatibility issues). If you want to be a collaborator on the project, please feel free to contact me on [instagram](https://www.instagram.com/choubari_/) ! You've to be passionate about programming and interested on developping islamic apps and on open source contributions.
 
 ## :copyright: Credits & Support:
 
