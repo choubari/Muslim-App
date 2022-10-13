@@ -7,18 +7,18 @@ The app is available only in Arabic but I'm planning to release an English versi
 
 ## :sparkles: Features:
 
-* Prayer Times (of your current location)
-* Morning&Evening Remembrance
-* Remembrance
-* Names of Allah
-* Importance of Dhikr
-* Tally Counter
-* Qibla Direction
-* Zakat Calculator
-* Islamic Wallpapers
-* Daily Notifications
-* App Widget
-* Light & Dark Themes
+- Prayer Times (of your current location)
+- Morning&Evening Remembrance
+- Remembrance
+- Names of Allah
+- Importance of Dhikr
+- Tally Counter
+- Qibla Direction
+- Zakat Calculator
+- Islamic Wallpapers
+- Daily Notifications
+- App Widget
+- Light & Dark Themes
 
 and other features will be added on the next updates ...
 
@@ -33,31 +33,29 @@ and other features will be added on the next updates ...
 - [x] Save its value locally
 - [ ] Fix Notifications on API level 26 and plus
 - [x] Seperate Ads codes on a different file (added to .gitignore)
+- [x] Provide Google testing Ads codes on [a different file](https://gist.github.com/choubari/7f773bb683c98368b7649bf51ae7f003) to avoid missing string errors for new contributors and launch app successfully.
 
-### In progress : 
+### In progress :
+
 - [ ] Implementing English Translation.
-- [ ] Provide Google testing Ads codes on a different file to avoid missing string errors for new contributors.
 
-
-## :tada: Download *Beta Version*: 
+## :tada: Download _Beta Version_:
 
 We hit 500+ Downloads on PlayStore :
 
-*Still in Beta version, please if you find any issue or you want to suggest a feature, feel free to open an issue.*
-
+_Still in Beta version, please if you find any issue or you want to suggest a feature, feel free to open an issue._
 
 <p align="center">
  <a href='https://play.google.com/store/apps/details?id=com.choubapp.muslimapp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/ width="300px" heigh="100px" ></a>
 
-
-
-## :link: Resources : 
+## :link: Resources :
 
 Graphic elements and icons: [Freepik](freepik.com) , [FlatIcon](flaticon.com) and [icon8](icons8.com)
 
-Qibla Menu inspired from [this repository](https://github.com/najamiqbal/kiblat-Campass-android) 
+Qibla Menu inspired from [this repository](https://github.com/najamiqbal/kiblat-Campass-android)
 
 ## :loudspeaker: Looking for collaborators :
+
 I'm quite busy and I can't maintain the project frequently (adding new features and fixing API compatibility issues). If you want to be a collaborator on the project, please feel free to contact me on [instagram](https://www.instagram.com/choubari_/) ! You've to be passionate about programming and interested on developping islamic apps and on open source contributions.
 
 ## :copyright: Credits & Support:
@@ -72,13 +70,8 @@ If you liked my work and you want to support me, follow me on other platforms. Y
 
 <a href="https://www.buymeacoffee.com/choubari" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" width="140px" heigh="50px" ></a>
 
-
 **:thumbsup: Your support means a lot. It keeps me motivated adding more features to the app each time.**
-
-
-
-
 
 ##
 
-Made with :heart: in Ramadan 2020 
+Made with :heart: in Ramadan 2020
