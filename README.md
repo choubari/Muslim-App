@@ -32,7 +32,7 @@ Wanna discuss that with me? reach me on [Twitter](https://twitter.com/choubari_)
 
 and other features will be added on the next updates ...
 
-## :soon: New Features and Bugs will be fixed on the next update _(very soon)_ :
+## :soon: New Features and Bugs will be fixed on the next update:
 
 - [x] Update splash screen
 - [x] Update app Logo and icon
@@ -44,9 +44,6 @@ and other features will be added on the next updates ...
 - [ ] Fix Notifications on API level 26 and plus
 - [x] Seperate Ads codes on a different file (added to .gitignore)
 - [x] Provide Google testing Ads codes on [a different file](https://gist.github.com/choubari/7f773bb683c98368b7649bf51ae7f003) to avoid missing string errors for new contributors and launch app successfully.
-
-### In progress :
-
 - [ ] Implementing English Translation (string translations available at the `another` branch).
 
 ## :tada: Download _Beta Version_:
